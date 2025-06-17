@@ -1,5 +1,5 @@
 def knapsack(values, weights, capacity):
-    
+    print(f"values={values}, weights={weights}, capacity={capacity}")
     n = len(values)
     # Crear la tabla DP (n+1 filas y capacity+1 columnas)
     dp = [[0] * (capacity + 1) for _ in range(n + 1)]
@@ -15,6 +15,7 @@ def knapsack(values, weights, capacity):
                 dp[i][w] = dp[i - 1][w]
 
     # El resultado está en dp[n][capacity]
+    print(dp)
     return dp[n][capacity]
 
 
